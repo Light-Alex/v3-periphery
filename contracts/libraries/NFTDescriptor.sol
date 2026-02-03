@@ -24,8 +24,24 @@ library NFTDescriptor {
 
     uint256 constant sqrt10X128 = 1076067327063303206878105757264492625226;
 
+    // 参数详解
+    // 参数	                说明	                   示例
+    // tokenId	            NFT 的唯一标识符	       12345
+    // quoteTokenAddress	报价代币地址（价格分子）    0xA0b8...EB48 (USDC)
+    // baseTokenAddress	    基础代币地址（价格分母）	0xC02a...6Cc2 (WETH)
+    // quoteTokenSymbol	    报价代币符号	           "USDC"
+    // baseTokenSymbol	    基础代币符号	           "WETH"
+    // quoteTokenDecimals	报价代币小数位数	        6
+    // baseTokenDecimals	基础代币小数位数	        18
+    // flipRatio	        是否翻转价格比例	       true/false
+    // tickLower	        价格区间下限	           20100
+    // tickUpper	        价格区间上限	           20200
+    // tickCurrent	        当前价格 tick	           20150
+    // tickSpacing	        tick 间距	               60
+    // fee	                池子费用等级	           3000 (0.3%)
+    // poolAddress	        池子合约地址	           0x8ad5...C52d
     struct ConstructTokenURIParams {
-        uint256 tokenId;
+        uint256 tokenId; // 
         address quoteTokenAddress;
         address baseTokenAddress;
         string quoteTokenSymbol;
